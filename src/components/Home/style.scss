@@ -1,0 +1,132 @@
+
+@use 'src/styles/vars' as v;
+
+.search{
+    height: 100vh;
+    background: v.$blue-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-right: v.$gutter;
+    padding-left: v.$gutter;
+    @media (max-width: 350px) {
+        height: auto;
+        padding-top: calc(( #{v.$gutter}) * 8 );
+        padding-bottom: calc(( #{v.$gutter}) * 2 );
+    }
+
+    &__content{
+        position: relative;
+        z-index: 5;
+        @media (min-width: 1044px) {
+            width: 80%;
+        }
+        @media (min-width: 1430px) {
+            width: 70%;
+        }
+        @media (min-width: 1600px) {
+            width: 60%;
+        }
+        &--bigTitle{
+            display: block;
+            margin: 0 auto;
+            text-transform: uppercase;
+            font-size: v.$huge-text-mobile;
+            font-weight: bold;
+            text-align: center;
+            color: v.$light-color;
+            margin-bottom: v.$gutter;
+            @media (min-width: 600px) {
+                font-size: v.$huge-text;
+            }
+        }
+        &--subtitle{
+            display: block;
+            margin: 0 auto;
+            font-size: v.$corps;
+            text-align: center;
+            color: v.$light-color;
+            margin-bottom: v.$gutter;
+            @media (min-width: 500px) {
+                width: 30rem;
+            }
+        }
+        &--form{
+            margin: 0 auto;
+            @media (min-width: 500px) {
+                width: 30rem;
+            }
+            &-dropdown{
+                margin-bottom: v.$alf-gutter;
+            }
+            &-input{
+                margin-bottom: calc(( #{v.$gutter}) * 2 );
+            }
+            &-button {
+                display: flex;
+                padding-top: v.$gutter;
+                padding-bottom: v.$gutter;
+                margin: 0 auto;
+            }
+        }
+        &--image{
+            position: absolute;
+            &-js{
+                top: 22%;
+                left: 75%;
+                @media (max-width: 920px){
+                    top: 18%;
+                    left: 60%;
+                }
+                @media (max-width: 750px){
+                    top: 10%;
+                    left: 50%;
+                }
+                @media (max-width: 4px){
+                    max-width: 6rem
+                }
+            }
+            &-symfony{
+                top: 42%;
+                left: 63%;
+                @media (max-width: 920px){
+                    top: 58%;
+                    left: 60%;
+                }
+                @media (max-width: 750px){
+                    top: 58%;
+                    left: 60%;
+                }
+                @media (max-width: 4px){
+                    max-width: 6rem
+                }
+            }
+            &-react{
+                top: 23%;
+                left: 16%;
+                transform: rotate(18deg);
+                @media (max-width: 920px){
+                    top: 33%;
+                    left: 5%;
+                }
+                @media (max-width: 4px){
+                    max-width: 6rem
+                }
+            }
+            &-code{
+                top: 50%;
+                left: 30%;
+                @media (max-width: 920px){
+                    top: 70%;
+                    left: 10%;
+                }
+            }
+        }
+    }
+}
+
+.ok::placeholder{
+    color: #FFFDD8;
+}
+//padding-left: calc(( #{v.$gutter}) * 5 );

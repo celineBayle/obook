@@ -1,0 +1,37 @@
+@use 'src/styles/vars' as v;
+
+///////////
+.btn-light {
+    background: transparent;
+    border: v.$border-width solid v.$light-color;
+    padding: v.$alf-gutter v.$gutter v.$alf-gutter v.$gutter;
+    border-radius: 30px;
+    color: v.$light-color;
+    font-weight: 600;
+    font-size: v.$corps;
+}
+.btn-light:hover{
+    background: v.$light-color;
+    color: v.$dark-color;
+}
+
+///////////
+.btncomponent {
+    background: v.$light-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    width: 30rem;
+    font-weight: 600;
+    color: v.$light-color;
+    // font-size: v.$corps;
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+    &:hover{
+        box-shadow: 0px 0px 20px v.$light-color;
+    }
+}
+

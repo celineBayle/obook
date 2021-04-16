@@ -1,0 +1,57 @@
+@use 'src/styles/vars' as v;
+
+.lastProducts{
+    min-height: 100vh;
+    background: v.$green-color;
+    padding-left: v.$gutter;
+    padding-right: v.$gutter;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: calc(( #{v.$gutter}) * 15 );;
+    padding-top: calc(( #{v.$gutter}) * 6 );;
+    @media (max-width: 800px) {
+        margin-top: 0;
+
+    }
+
+    &__title{
+        text-transform: uppercase;
+        text-align: center;
+        font-size: v.$title;
+        font-weight: bold;
+        color: v.$light-color;
+        margin-bottom: calc(( #{v.$gutter}) * 8 );;
+        @media (max-width: 800px) {
+            position: initial;
+            margin-bottom: calc(( #{v.$gutter}) * 3 );
+        }
+    }
+
+    &__design{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        &--projects{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            margin-right: v.$gutter;
+            margin-left: v.$gutter;
+            flex-wrap: wrap;
+            &-card{
+                margin: 0 v.$gutter v.$gutter v.$gutter;
+            }
+        }
+
+        &--image{
+            max-height: 500px;
+            align-self: center;
+            @media (max-width: 700px) {
+                display: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@use 'src/styles/vars' as v;
+
+.app {
+  height: 100vh;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+

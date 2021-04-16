@@ -1,0 +1,53 @@
+
+@use 'src/styles/vars' as v;
+
+.filterStudent {
+  border-radius: v.$border-radius;
+  padding: v.$big-gutter;
+  background-color: v.$yellow-color;
+  height: fit-content;
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid v.$dark-color;
+      padding-bottom: v.$gutter;
+      
+        &--name {         
+          font-size: v.$title;
+          font-weight: 800; 
+            @media(max-width: 700px){
+              font-size: v.$title-mobile;
+            }
+        }
+        &--redo {
+          display: inline;
+          font-size: 1.2em;
+          margin-left: 2rem;            
+        }
+
+    }
+
+  &__orientation,
+  &__dispo {
+    font-weight: 800;
+    margin-top: v.$gutter;
+    margin-bottom: v.$gutter;
+  }
+
+  &__choice {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start; 
+    &--line {
+      border-top: 1px solid v.$dark-color; 
+      margin-top: v.$gutter;
+    }   
+  }
+
+  &__input{
+    margin: 8px;
+  }  
+
+}
+

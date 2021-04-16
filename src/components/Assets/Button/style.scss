@@ -1,0 +1,62 @@
+@use 'src/styles/vars' as v;
+
+.btn-dark{
+    background: transparent;
+    border: v.$border-width solid v.$dark-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border-radius: 30px;
+    font-weight: 600;
+    color: v.$dark-color;
+    font-size: v.$corps;
+}
+.btn-dark:hover{
+    background: v.$dark-color;
+    color: white;
+}
+
+///////////
+.btn-dark-plain{
+    background: v.$dark-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border: v.$border-width solid v.$dark-color;
+    border-radius: 30px;
+    font-weight: 600;
+    color: white;
+    border: none;
+    font-size: v.$corps;
+}
+.btn-dark-plain:hover{
+    background: transparent;
+    color: v.$dark-color;
+    border: v.$border-width solid v.$dark-color;
+}
+///////////
+.btn-light {
+    background: transparent;
+    border: v.$border-width solid v.$light-color;
+    padding: v.$alf-gutter v.$gutter v.$alf-gutter v.$gutter;
+    border-radius: 30px;
+    color: v.$light-color;
+    font-weight: 600;
+    font-size: v.$corps;
+}
+.btn-light:hover{
+    background: v.$light-color;
+    color: v.$dark-color;
+}
+
+///////////
+.btn-light-plain {
+    background: v.$light-color;
+    border: v.$border-width solid v.$light-color;
+    padding: v.$alf-gutter v.$gutter v.$alf-gutter v.$gutter;
+    border-radius: 30px;
+    font-weight: 600;
+    color: v.$dark-color;
+    // font-size: v.$corps;
+}
+.btn-light-plain:hover{
+    background: transparent;
+    color: v.$light-color;
+}
+

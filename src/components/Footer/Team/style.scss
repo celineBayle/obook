@@ -1,0 +1,70 @@
+
+@use 'src/styles/vars' as v;
+
+.team {
+  background-color: v.$blue-color;
+  min-height: 100vh;
+  padding: 100px;
+  color: v.$light-color;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__title--text {
+    font-size: v.$huge-text;
+    font-weight: 800;
+    margin: v.$big-gutter auto;
+    @media(max-width: 1034px){
+      font-size: v.$title;
+    }
+   }
+
+  &__group {   
+    display: flex;
+    width: 100%;
+    @media(max-width: 1400px) {
+      flex-direction: column;
+    }
+        
+    &--front{
+      color: v.$orange-color;
+    }
+    &--back{
+      color: v.$green-color;
+    }
+    
+    &--front,
+    &--back{
+      display:flex;
+      justify-content: space-around;
+      flex-direction: column;
+      width: 50%; 
+      @media(max-width: 1400px) {
+        width: 100%;
+      }
+           
+       
+      &-card {
+        display: flex;
+        justify-content: space-around;
+        @media(max-width: 800px) {
+          display: block;
+          margin: auto;
+        }
+        
+      } 
+      &-title{
+        align-self: center;
+        padding: v.$big-gutter;
+        font-size: v.$title;
+        font-weight: 800;
+      }
+    }
+
+    
+  }
+
+}
+
+
+

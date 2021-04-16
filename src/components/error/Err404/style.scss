@@ -1,0 +1,16 @@
+@use 'src/styles/vars' as v;
+
+.err404{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$blue-color;
+    object-fit: cover;
+    background: url('src/assets/img/blur.png');
+    background-position:center center;
+    &__img{
+      object-fit: cover;
+      height: 100%;
+    }
+}

@@ -1,0 +1,45 @@
+@use 'src/styles/vars' as v;
+
+.filterProject {
+  
+  margin: 0 auto;
+  width: 100%;
+  max-height: 30rem;
+  font-size: v.$corps;
+  border-radius: v.$border-radius;
+  padding: v.$big-gutter;
+  background-color: v.$yellow-color;
+    @media(max-width: 760px) {
+      max-width:600px;
+    }
+    &__title{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid v.$dark-color;
+      padding-bottom: v.$gutter;
+      margin-bottom: v.$gutter;
+      
+        &--name {         
+          font-size: v.$title;
+          font-weight: 800; 
+            @media(max-width: 700px){
+              fony-size: v.$title-mobile;
+            }               
+        }
+        &--redo {
+          display: inline;
+          font-size: 1.2em;
+          margin-left: 2rem;            
+        }
+
+    }
+
+    &__choice {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;      
+  }
+}
+
+

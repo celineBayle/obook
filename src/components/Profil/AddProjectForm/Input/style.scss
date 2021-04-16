@@ -1,0 +1,46 @@
+@use 'src/styles/vars' as v;
+
+.input-dark{
+    width: 100%;
+    background: transparent;
+    border: v.$border-width solid v.$dark-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: v.$corps;
+    color: v.$dark-color;
+    font-size: v.$corps;
+}
+
+.fieldGroup__label-dark{
+    display: block;
+    padding-bottom: v.$alf-gutter;
+    color: v.$dark-color;
+    font-weight: bold;
+}
+
+///////////
+.input-light {
+    width: 100%;
+    background: transparent;
+    border: v.$border-width solid v.$light-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border-radius: 30px;
+    font-size: v.$corps;
+    font-weight: 400;
+    color: v.$light-color;
+    font-size: v.$corps;
+}
+.input-light::placeholder {
+    color: v.$light-color-placeholder;
+}
+
+.fieldGroup__label-light{
+    display: block;
+    padding-bottom: v.$alf-gutter;
+    color: v.$light-color;
+    font-weight: bold;
+}
+///////////
+
+// padding: calc(#{v.$gutter / 2});

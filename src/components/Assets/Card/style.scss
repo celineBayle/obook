@@ -1,0 +1,53 @@
+@use 'src/styles/vars' as v;
+
+
+.card {
+  width: 300px;
+  height: fit-content;
+  display:flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.363);
+  color: v.$light-color;
+  border-radius: v.$border-radius;
+  text-align: center;
+
+  &__image{
+    border-radius: v.$border-radius v.$border-radius 0px 0px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin-top: v.$gutter;
+    margin-bottom: v.$gutter;
+    font-weight: bold;
+  }
+
+  &__container{
+    padding-right: v.$gutter;
+    padding-left: v.$gutter;
+  }
+
+  &__button{
+    display: block;
+    margin-bottom: v.$gutter;
+  }
+}
+
+.btn-light-plain {
+  background: v.$light-color;
+  border: v.$border-width solid v.$light-color;
+  padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+  border-radius: 30px;
+  font-weight: 600;
+  color: v.$dark-color;
+  display: block;
+  margin-bottom: v.$gutter;
+  // font-size: v.$corps;
+}
+.btn-light-plain:hover{
+  background: transparent;
+  color: v.$light-color;
+}
+

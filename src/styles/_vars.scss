@@ -1,0 +1,54 @@
+////////////
+// COLORS //
+////////////
+
+// color
+$light-color: #FFFDD8;
+$light-color-placeholder: #fffdd8a9;
+$dark-color: #373736;
+$dark-color-placeholder: #373736b9;
+
+// the different background color
+$blue-color: #019c9c;
+$blue-color-header: darken($blue-color, 6%);
+
+$green-color: #B8DE6E;
+$green-color-header: darken($green-color, 7%);
+
+$orange-color: #F39232;
+$orange-color-header: darken($orange-color, 6%);
+
+$yellow-color: #f2b4b4;
+$yellow-color-header: darken($yellow-color, 6%);
+
+
+
+/////////////
+// GUTTERS //
+/////////////
+
+$alf-gutter: 0.5rem;
+$gutter: 1rem;
+$big-gutter: 2rem;
+$huge-gutter: 3rem;
+
+/////////////
+// BORDERS //
+/////////////
+
+$border-width: 2px;
+$border-radius: 8px;
+
+//////////
+// FONT //
+//////////
+
+$huge-text: 3em;
+$corps: 1em;
+$title: 2em;
+
+$huge-text-mobile: 2em;
+$title-mobile: 1.5em;
+$title-small-mobile: 1.3em;
+
+

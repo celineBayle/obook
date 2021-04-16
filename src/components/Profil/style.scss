@@ -1,0 +1,312 @@
+@use 'src/styles/vars' as v;
+
+//
+// Composant commun entre les blocks
+//
+.profil_container{
+  margin-top: v.$gutter;
+  padding: v.$gutter;
+  border-radius: v.$border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  -webkit-animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+  
+  
+  @media (min-width: 768px) {
+    margin-right: v.$alf-gutter;
+    margin-left: v.$alf-gutter;
+  }
+}
+
+.profil_h2{
+  font-size: v.$title-small-mobile;
+  font-weight: bold;
+
+  @media (min-width: 768px) {
+    font-size: v.$title-mobile;
+  }
+}
+
+.top{
+  width: 100%;
+  display: flex;
+  @media (max-width: 767px) {
+    display: none;
+    
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+  }
+}
+
+.bottom{
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.before{
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+
+
+//
+// composant profil
+//
+
+.profil {
+  padding-top: 80px;
+  padding-right: v.$gutter;
+  padding-left: v.$gutter;
+  background-color: v.$yellow-color;
+  padding-bottom: v.$huge-gutter;
+  min-height: 100vh;
+
+  @media (min-width: 768px) {
+    padding-right: v.$huge-gutter;
+    padding-left: v.$huge-gutter;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  //
+  // bouton de retour
+  //
+  &__top{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    &--back{
+      width: 100%;
+      cursor: pointer;
+    }
+  }
+
+  //
+  // Introduction image, nom, contact
+  //
+
+  &__introduction{
+    background-color: white;
+  
+    @media (min-width: 768px) {
+      width: 100%;
+    }
+    @media (min-width: 768px) {
+      width: 48%;
+    }
+
+    &--imageIntroduction{
+      width: 200px;
+      height: 200px;
+      box-shadow: -2px -1px 92px -25px rgba(0,0,0,0.22);
+      -webkit-box-shadow: -2px -1px 92px -25px rgba(0,0,0,0.22);
+      -moz-box-shadow: -2px -1px 92px -25px rgba(0,0,0,0.22);
+
+      &-profil{
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+        border-radius: v.$border-radius;
+      }
+      &-work{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        width: 200px;
+        padding: v.$alf-gutter;
+        border-radius: v.$border-radius v.$border-radius 0px 0px;
+        background-color: rgba(0, 0, 0, 0.315);
+        color: white;
+        .notReady {
+          width: 15px;
+          height: 15px;
+          background-color: red;
+          border-radius: 100%;
+          margin-right: v.$alf-gutter;
+        }
+        .ready {
+          width: 15px;
+          height: 15px;
+          background-color: rgb(0, 255, 0);
+          border-radius: 100%;
+          margin-right: v.$alf-gutter;
+        }
+      }
+    }
+
+    &--info{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+
+      &-name{
+        font-size: v.$title-mobile;
+        font-weight: bold;
+        margin-top: v.$gutter;
+      }
+
+      &-orientation {
+        margin-top: v.$alf-gutter;
+        margin-bottom: v.$gutter;
+      }
+    }
+  }
+
+  //
+  // Contrat favoris 
+  //
+
+  &__favoriteContract{
+    background-color: white;
+
+    &--box{
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      margin-top: v.$gutter;
+
+      &-contract{
+        padding: v.$alf-gutter;
+        background-color: v.$dark-color;
+        color: v.$light-color;
+        border-radius: v.$border-radius;
+      }
+    }
+  }
+
+  //
+  // Qui suis-je
+  //
+
+  &__whoAmI{
+    background-color: white;
+    width: 100%;
+
+    &--description{
+      margin-top: v.$gutter;
+      text-align: center;
+    }
+  }
+
+  //
+  // Technos
+  //
+
+  &__technos{
+    background-color: white;
+    flex-grow : 1;
+
+    &--box{
+      margin-top: v.$gutter;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-techno{
+        margin-left: v.$alf-gutter;
+        margin-right: v.$alf-gutter;
+        margin-bottom: v.$alf-gutter;
+
+        &_image{
+          height: 50px;
+          width: 50px;
+          img{
+            border-radius: v.$border-radius;
+          }
+          margin: 0 auto;
+          margin-bottom: v.$alf-gutter;
+        }
+      }
+    }
+  }
+
+  //
+  // Projets
+  //
+
+  &__projets{
+    background-color: white;
+    width: 100%;
+    &--box{
+      margin-top: v.$gutter;
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      &-projet{
+        margin-left: v.$alf-gutter;
+        margin-right: v.$alf-gutter;
+        margin-bottom: v.$gutter;
+      }
+    }
+  }
+}
+
+
+.loading{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-3-3 11:56:53
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation scale-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-top {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 0%;
+            transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}

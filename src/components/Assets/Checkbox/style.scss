@@ -1,0 +1,27 @@
+@use 'src/styles/vars' as v;
+
+.checkboxGroup{
+    &__option{
+        &--input{
+            font-weight: 400;
+            font-size: v.$corps;
+            color: v.$dark-color;
+            font-size: v.$corps;
+            &:focus {
+                outline: none;
+            }
+        &--label{
+            font-weight: 400;
+        }
+        }
+    }
+}
+
+.checkboxGroup__label-dark{
+    display: block;
+    padding-bottom: v.$alf-gutter;
+    color: v.$dark-color;
+    font-weight: bold;
+}
+
+// padding: calc(#{v.$gutter / 2});

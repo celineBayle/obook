@@ -1,0 +1,52 @@
+@use 'src/styles/vars' as v;
+
+// .formLogin{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     width: 100%;
+//     border: 1px solid red;
+//     padding: none;
+// }
+
+.formSubscribe{
+    &__stape {
+        display: flex;
+        justify-content: center;
+        margin-bottom: calc(#{v.$gutter} * 2);
+    }
+    &__fields{
+        &--input{
+            margin-bottom: v.$gutter;
+        }
+    }
+
+    &__control{
+        justify-content: center;
+        display: flex;
+    }
+}
+
+.subscribe{
+    margin-left: v.$gutter;
+}
+
+.CreatiionOk{
+    font-size: v.$title;
+    color: v.$green-color;
+    padding: v.$gutter;
+    margin-top: 5rem;
+    font-weight: bold;
+}
+
+.error{
+    border-color: red;
+}
+
+.errorText{
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: v.$gutter;
+}

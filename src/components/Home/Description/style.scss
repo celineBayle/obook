@@ -1,0 +1,131 @@
+
+@use 'src/styles/vars' as v;
+
+.Description{
+    background: v.$orange-color;
+    padding-right: calc(( #{v.$gutter}) * 3 );
+    padding-left: calc(( #{v.$gutter}) * 3 );
+    @media (max-width: 480px) {
+        padding-right: calc(( #{v.$gutter}) * 1 );
+        padding-left: calc(( #{v.$gutter}) * 1 );
+    }
+    &__page{
+        border-radius: v.$border-radius;
+        bottom: calc(( #{v.$gutter}) * 8 );
+        position: relative;
+        background-color: white;
+        width: 70%;
+        @media (max-width: 1300px) {
+            width: 100%;
+        }
+        margin: 0 auto;
+        padding: v.$gutter;
+        padding-top: calc(( #{v.$gutter}) * 3 );
+        &--title{
+            text-align: center;
+            font-size: v.$title;
+            font-weight: bold;
+            width: 60%;
+            display: block;
+            color: v.$dark-color;
+            margin: 0 auto;
+            padding-bottom: calc(( #{v.$gutter}) * 2 );
+            @media (max-width: 720px) {
+                width: 90%;
+            }
+            @media (max-width: 560px) {
+                font-size: v.$title-mobile;
+                width: 100%;
+                line-height: 1.3em;
+            }
+        }
+        &--text{
+            text-indent: 3em;
+            text-align: justify;
+            color: v.$dark-color;
+            font-size: v.$corps;
+            line-height: 2em;
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: calc(( #{v.$gutter}) * 2 );
+            @media (max-width: 720px) {
+                width: 80%;
+            }
+            @media (max-width: 560px) {
+                width: 90%;
+            }
+        }
+        &--video{
+            text-indent: 3em;
+            text-align: justify;
+            color: v.$dark-color;
+            font-size: v.$corps;
+            line-height: 2em;
+            width: 60%;
+            display: block;
+            margin: 0 auto;
+            padding-bottom: calc(( #{v.$gutter}) * 2 );
+            height: 400px;
+            @media (max-width: 720px) {
+                width: 80%;
+                height: 300px;
+            }
+            @media (max-width: 560px) {
+                width: 90%;
+                height: auto;
+            }
+        }
+    }
+
+    &__school{
+        position: relative;
+        bottom: v.$huge-gutter;
+        height:100vh;
+        max-height:20rem;
+        &--image{
+            display: block;
+            margin: 0 auto;
+            padding-bottom: v.$gutter;
+        }
+        &--textEcole{
+            display: block;
+            margin: 0 auto;
+            padding-bottom: v.$gutter;
+            text-align: center;
+            width: 35%;
+            @media (max-width: 1270px) {
+                width: 60%;
+            }
+            @media (max-width: 1150px) {
+                width: 70%;
+            }
+            @media (max-width: 700px) {
+                width: 90%;
+            }
+            @media (max-width: 500px) {
+                width: 100%;
+            }
+            color: v.$light-color;
+        }
+        &--button {
+            background: v.$light-color;
+            padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+            width: 100%;
+            max-width: 20rem;
+            border-radius: 30px;
+            font-weight: 600;
+            color: v.$dark-color;
+            border: none;
+            font-size: v.$corps;
+            margin: 0 auto;
+            display: block;
+    
+            &:hover{
+              background: transparent;
+              color: v.$light-color;
+              border: v.$border-width solid v.$light-color;
+            }
+          }
+    }
+}

@@ -1,0 +1,27 @@
+@use 'src/styles/vars' as v;
+
+.dropdownGroup__dark{
+    width: 100%;
+    background: transparent;
+    border: v.$border-width solid v.$dark-color;
+    padding: v.$gutter v.$gutter v.$gutter v.$gutter;
+    border-radius: 30px;
+    font-weight: 400;
+    font-size: v.$corps;
+    color: v.$dark-color;
+    font-size: v.$corps;
+    // appearance: none; 
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.dropdownGroup__label-dark{
+    display: block;
+    padding-bottom: v.$alf-gutter;
+    color: v.$dark-color;
+    font-weight: bold;
+}
+
+// padding: calc(#{v.$gutter / 2});

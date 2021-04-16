@@ -1,0 +1,29 @@
+@use 'src/styles/vars' as v;
+
+.footer {
+    height: 64px;
+    background: v.$dark-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: v.$alf-gutter;
+
+    &__button{
+        margin-left: v.$alf-gutter;
+        margin-right: v.$alf-gutter;
+
+        @media (max-width: 768px) {
+        margin: v.$alf-gutter 0 v.$alf-gutter 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.contact_form{
+    position: fixed;
+    z-index: 5;
+}

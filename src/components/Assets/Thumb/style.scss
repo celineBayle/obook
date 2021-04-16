@@ -1,0 +1,55 @@
+@use 'src/styles/vars' as v;
+
+.thumb {  
+  max-width: 30rem;
+  height: auto;
+  margin:2.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: v.$border-radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 25%;
+  color: v.$light-color;
+  font-size: v.$title;
+  padding: v.$big-gutter;
+  
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin: v.$gutter;    
+  }
+
+  &__name {    
+    text-align: center;
+  }
+
+  &__button {        
+    color: v.$yellow-color-header;    
+  }
+
+  @media (max-width:1200px) {
+    .thumb {
+      max-width: 15rem;
+      
+      margin: 1rem;
+      font-size: v.$title-mobile;
+      flex-shrink: inherit;
+
+      &__img{
+        max-width: 12rem;
+      }
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+

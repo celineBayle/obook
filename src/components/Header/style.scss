@@ -1,0 +1,211 @@
+@use 'src/styles/vars' as v;
+
+.header {
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: v.$light-color;
+  font-size: v.$corps; 
+  position: fixed;
+  padding-left: v.$gutter;
+  padding-right: v.$gutter;
+
+  
+
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.247);
+  z-index: 8;
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+
+  &__left{
+    width: 25%;
+    display: flex;
+    @media (max-width: 1200px) {
+      width: auto;
+    }
+
+    &--burgerMenu {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-right: v.$gutter;
+      background: rgba(0, 0, 0, 0.397);
+      width: 40px;
+      height: 40px;
+      border-radius: v.$border-radius;
+      @media (max-width: 1200px) {
+        display: flex;
+      }
+    }
+
+    &--logo {
+      display: flex;
+      align-items: center;
+      &-image{
+        max-width: 120px;
+      }
+    }
+  }
+  &__nav {
+    @media (max-width: 1200px) {
+      height: auto;
+      position: absolute;
+      top: 0px;
+      padding-top: calc(#{v.$alf-gutter} + 64px);
+      padding-bottom: v.$alf-gutter;
+      right: 0px;
+      background: v.$blue-color-header;;
+      width: 100vw;
+      z-index: -2;
+    }
+    &--list {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      @media (max-width: 1200px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+
+      &-link {
+        font-weight: 600;
+        padding-left: v.$gutter;
+        padding-right: v.$gutter;
+        @media (max-width: 1200px) {
+          width: auto;
+          padding: v.$alf-gutter 0 v.$alf-gutter 0;
+        }
+
+        &_text {
+          &.selected {
+            &:after {
+              content: "";
+              display: block;
+              background: v.$light-color;
+              height: 5px;
+              max-width: 100%;
+              margin-top: 4px;
+              top: 100px;
+              right: 100px;  
+            }        
+          }           
+          &:hover {            
+            &:after {
+              content: "";
+              display: block;
+              background: v.$light-color;
+              height: 5px;
+              max-width: 100%;
+              margin-top: 4px;
+              top: 100px;
+              right: 100px;            
+            }              
+          }
+        }
+      }
+    }
+
+    &--connect {
+      display: none;
+      @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: v.$alf-gutter;
+        
+        &-subscribe {
+          font-weight: 400;
+          font-size: calc(#{v.$corps / 1.3});
+          margin-top: v.$alf-gutter;
+          &:hover{
+            font-weight: 500;
+          }
+        }
+        &-button {
+          margin-top: v.$gutter;
+        }
+      }
+    }
+  }
+
+  &__connect {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 25%;
+    cursor:pointer;
+
+    @media (max-width: 1200px) {
+      width: auto;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &--subscribe {
+      margin-right: v.$gutter;
+      font-weight: 400;
+      font-size: calc(#{v.$corps / 1.3});    
+      text-align: center;  
+
+      &:hover {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.orange-background{
+  background: v.$orange-color-header;
+}
+
+.yellow-background{
+  background: v.$yellow-color-header;
+}
+
+.green-background{
+  background: v.$green-color-header;
+}
+
+.default{
+  background: v.$blue-color-header;
+}
+
+.button__profil{
+    margin-right: v.$alf-gutter;
+    margin-left: v.$alf-gutter;
+    background: v.$light-color;
+    border: v.$border-width solid v.$light-color;
+    // padding: v.$alf-gutter v.$alf-gutter v.$alf-gutter v.$alf-gutter;
+    border-radius: 30px;
+    height: 2.4rem;
+    width: 2.4rem;
+    color: v.$dark-color;
+    font-weight: 600;
+    font-size: v.$corps;
+    @media (max-width: 768px) {
+      margin-top: v.$alf-gutter;
+    }
+    
+    &:hover{
+      background: transparent;
+      color: v.$dark-color;
+      color: v.$light-color;
+    }
+}
+
+.goodmorning{
+  @media (max-width: 768px) {
+    margin-top: v.$alf-gutter;
+  }
+}
+
+.link-account{
+  margin-right: 0
+}

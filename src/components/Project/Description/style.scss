@@ -1,0 +1,25 @@
+@use 'src/styles/vars' as v;
+
+.project__info--description {
+  background-color: white;
+  padding: v.$gutter;
+  border-radius: v.$border-radius;
+  margin-top: v.$gutter;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    width: 50%;
+    margin-left: v.$alf-gutter;
+  }
+  
+  &-title {
+    font-size:v.$title;
+    font-weight: 800;
+    margin-bottom: v.$big-gutter;
+  }
+  &-text {
+    text-align: center;
+  }
+}

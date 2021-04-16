@@ -1,0 +1,14 @@
+@use 'src/styles/vars' as v;
+
+.contact {  
+    z-index: 9;
+    margin-top: calc(#{v.$gutter} * 2);
+    &__submit{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+input{
+  margin-bottom: v.$gutter;  
+}
